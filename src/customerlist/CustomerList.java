@@ -58,7 +58,7 @@ public class CustomerList {
             //postcode
             isError = true;
             while(isError){
-                psotcode = 
+                postcode = 
             }
         }
         
