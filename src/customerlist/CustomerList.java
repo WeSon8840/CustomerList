@@ -54,6 +54,12 @@ public class CustomerList {
             address = JOptionPane.showInputDialog("What is the address of customer " + (i + 1) + "?");
             city = JOptionPane.showInputDialog("What city does customer " + (i + 1) + "live in?");
             province = JOptionPane.showInputDialog("What province does the customer " + (i + 1) + "live in?");
+            
+            //postcode
+            isError = true;
+            while(isError){
+                psotcode = 
+            }
         }
         
        
