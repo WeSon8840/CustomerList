@@ -35,7 +35,9 @@ public class CustomerList {
         
         readFile.close();
         
-        //FileWeite
+        //FileWriter out;
+        //BufferedWeiter writeFile;
+        //Scanner input = new Scanner(System.in);
         PrintWriter fileOut = new PrintWriter(new FileWriter("CustomerList.txt",true));
         
         boolean isError = true;
