@@ -35,6 +35,7 @@ public class CustomerList {
         
         readFile.close();
         
+        //FileWeite
         PrintWriter fileOut = new PrintWriter(new FileWriter("CustomerList.txt",true));
         
         boolean isError = true;
@@ -55,10 +56,9 @@ public class CustomerList {
             city = JOptionPane.showInputDialog("What city does customer " + (i + 1) + "live in?");
             province = JOptionPane.showInputDialog("What province does the customer " + (i + 1) + "live in?");
             
-            //postcode
             isError = true;
             while(isError){
-                postcode = JOptionPane.showInputDialog("What is the post code of customer " + (i + 1) + "?" + "\n" + "(No space)");
+                postcode =  JOptionPane.showInputDialog("What is the post code of customer " + (i + 1) + "?" + "\n" + "(No space)");
                 
                 //check if enter a correct postcode
                 if ((Character.isLetter(postcode.charAt(0))) && (Character.isDigit(postcode.charAt(1))) 
@@ -68,10 +68,12 @@ public class CustomerList {
                     isError = false;
                 }
             }
+            //Output directly to file
             fileOut.println("Name: " + name + "\n" + "Address: " + address + "\n" 
                     + "City: " + city + "\n" + "Province: " + province + "\n" + "Post Code: " + postcode);
             
         }
+        //The file must be closed after writing is complete
         fileOut.close();
     }
     
