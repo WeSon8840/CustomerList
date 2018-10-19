@@ -58,11 +58,21 @@ public class CustomerList {
             //postcode
             isError = true;
             while(isError){
-                postcode = 
+                postcode = JOptionPane.showInputDialog("What is the post code of customer " + (i + 1) + "?" + "\n" + "(No space)");
+                
+                //check if enter a correct postcode
+                if ((Character.isLetter(postcode.charAt(0))) && (Character.isDigit(postcode.charAt(1))) 
+                       && (Character.isLetter(postcode.charAt(2))) && (Character.isDigit(postcode.charAt(3)))
+                       && (Character.isLetter(postcode.charAt(4))) && (Character.isDigit(postcode.charAt(5))) ){
+                    JOptionPane.showMessageDialog(null, "This is a correct post code, your information has now been saved to Customerist.");
+                    isError = false;
+                }
             }
+            fileOut.println("Name: " + name + "\n" + "Address: " + address + "\n" 
+                    + "City: " + city + "\n" + "Province: " + province + "\n" + "Post Code: " + postcode);
+            
         }
-        
-       
+        fileOut.close();
     }
     
 }
