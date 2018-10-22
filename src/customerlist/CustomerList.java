@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *
+ * The purpose of the program is to create a program to store a customer's name, address, 
+   city, province and postal code to a CustomerList file for Discount Fly.
  */
 
 package customerlist;
@@ -10,7 +10,8 @@ import javax.swing.*;
 
 /**
  *
- * @author glSon8840
+ * @author Gloria Song
+ * Date : 22/10/2018
  */
 public class CustomerList {
 
@@ -18,6 +19,7 @@ public class CustomerList {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        //Set the variables.
         String name, address, city, province, postcode = "";
         String myLine = "";
         String numberCustomers = "";
@@ -38,13 +40,17 @@ public class CustomerList {
         //FileWriter out;
         //BufferedWeiter writeFile;
         //Scanner input = new Scanner(System.in);
+        
+        //PrintWriter class is used to open a file for output
         PrintWriter fileOut = new PrintWriter(new FileWriter("CustomerList.txt",true));
         
         boolean isError = true;
         
+        //User input
         while (isError){
             try{
                 numberCustomers = JOptionPane.showInputDialog("How many customers would you like to input?");
+                //Crash on non-integer inputs
                 numCustomers = Integer.parseInt(numberCustomers);
                 isError = false;
             }catch (Exception e){
@@ -52,6 +58,7 @@ public class CustomerList {
             }
         }
         
+        //User inpout
         for(int i = 0; i < numCustomers; i++){
             name = JOptionPane.showInputDialog("What is the name of customer " + (i + 1) + "?");
             address = JOptionPane.showInputDialog("What is the address of customer " + (i + 1) + "?");
