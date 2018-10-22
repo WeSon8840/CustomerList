@@ -53,9 +53,9 @@ public class CustomerList {
                 //Crash on non-integer inputs
                 numCustomers = Integer.parseInt(numberCustomers);
                 isError = false;
-            }catch (Exception e){
-                JOptionPane.showInputDialog("Please enter a integer");
-            }
+            }catch (NumberFormatException nfe) {
+             //found an exception
+             System.out.println("YPlease enter a integer");
         }
         
         //User inpout
@@ -75,6 +75,8 @@ public class CustomerList {
                        && (Character.isLetter(postcode.charAt(4))) && (Character.isDigit(postcode.charAt(5))) ){
                     JOptionPane.showMessageDialog(null, "This is a correct post code, your information has now been saved to Customerist.");
                     isError = false;
+                } else {
+                    JOptionPane.showMessageDialog(null, "That is an incorrect postal code, pleas try again.");
                 }
             }
             //Output directly to file
@@ -87,4 +89,5 @@ public class CustomerList {
         fileOut.close();
     }
     
+   }
 }
