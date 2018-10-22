@@ -78,6 +78,7 @@ public class CustomerList {
                 }
             }
             //Output directly to file
+            fileOut.println("-------------------------------------");
             fileOut.println("Name: " + name + "\n" + "Address: " + address + "\n" 
                     + "City: " + city + "\n" + "Province: " + province + "\n" + "Post Code: " + postcode);
             
