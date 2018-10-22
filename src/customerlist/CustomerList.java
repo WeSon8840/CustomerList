@@ -59,13 +59,14 @@ public class CustomerList {
              System.out.println(nfe);
         }
         
-        //User inpout
+        //User input
         for(int i = 0; i < numCustomers; i++){
             name = JOptionPane.showInputDialog("What is the name of customer " + (i + 1) + "?");
             address = JOptionPane.showInputDialog("What is the address of customer " + (i + 1) + "?");
             city = JOptionPane.showInputDialog("What city does customer " + (i + 1) + " live in?");
             province = JOptionPane.showInputDialog("What province does the customer " + (i + 1) + " live in?");
             
+            //Error guard the postal code
             isError = true;
             while(isError){
                 postcode =  JOptionPane.showInputDialog("What is the post code of customer " + (i + 1) + "?" + "\n" + "(No space)");
