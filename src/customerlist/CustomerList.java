@@ -55,7 +55,8 @@ public class CustomerList {
                 isError = false;
             }catch (NumberFormatException nfe) {
              //found an exception
-             System.out.println("YPlease enter a integer");
+             System.out.println("Please enter a integer");
+             System.out.println(nfe);
         }
         
         //User inpout
