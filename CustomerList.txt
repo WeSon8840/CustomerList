@@ -1,5 +1,12 @@
+-------------------------------------
+Name: DD
+Address: SS
+City: CC
+Province: VV
+Post Code: N1N1N1
+-------------------------------------
 Name: Gloria
-Address: *** Dominion Dr.
+Address: 666 Dominion Dr.
 City: Guelph
 Province: ON
 Post Code: N1L0B5
