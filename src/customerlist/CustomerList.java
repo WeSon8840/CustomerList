@@ -37,9 +37,6 @@ public class CustomerList {
         
         readFile.close();
         
-        //FileWriter out;
-        //BufferedWeiter writeFile;
-        //Scanner input = new Scanner(System.in);
         
         //PrintWriter class is used to open a file for output
         PrintWriter fileOut = new PrintWriter(new FileWriter("CustomerList.txt",true));
